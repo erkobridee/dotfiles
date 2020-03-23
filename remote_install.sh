@@ -60,18 +60,19 @@ command_exists() {
 # Ensure Apple's command line tools are installed
 setup_xcode_cli() {
 	if ! command_exists cc; then
-		msg_info "Installing xcode CLI tools..."
+		echo "Installing xcode CLI tools..."
 		xcode-select --install
-		msg_success "Xcode CLI tools installed."
+		echo "Xcode CLI tools installed."
 		echo
 	else
-		msg_success "Xcode already installed. Skipping."
+		echo "Xcode already installed. Skipping."
 		echo
 	fi
 }
 
 clone_and_install() {
 	git clone $REMOTE $TARGET
+	echo
 	cd $TARGET
 	sh install.sh
 }
@@ -81,7 +82,9 @@ clone_and_install() {
 main() {
 	setup_color
 
-	msg_info 'Boostrapping...'
+	echo
+	echo 'Boostrapping...'
+	echo
 
 	setup_xcode_cli
 	clone_and_install
