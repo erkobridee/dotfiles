@@ -7,22 +7,66 @@
 #
 set -e
 
+trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
+
 REMOTE='https://github.com/erkobridee/dotfiles'
 TARGET="$HOME/.dotfiles"
 
-trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
+#------------------------------------------------------------------------------#
+
+setup_color() {
+	# Only use colors if connected to a terminal
+	if [ -t 1 ]; then
+		RED=$(printf '\033[31m')
+		GREEN=$(printf '\033[32m')
+		YELLOW=$(printf '\033[33m')
+		BLUE=$(printf '\033[34m')
+		BOLD=$(printf '\033[1m')
+		RESET=$(printf '\033[m')
+	else
+		RED=""
+		GREEN=""
+		YELLOW=""
+		BLUE=""
+		BOLD=""
+		RESET=""
+	fi
+}
+
+msg_info() {
+	echo ${BLUE}"Info: $@"${RESET} >&2
+}
+
+msg_error() {
+	echo ${RED}"Error: $@"${RESET} >&2
+}
+
+msg_warning() {
+	echo ${YELLOW}"Warning: $@"${RESET} >&2
+}
+
+msg_success() {
+	echo ${GREEN}"Success: $@"${RESET} >&2
+}
+
+#------------------------------------------------------------------------------#
 
 command_exists() {
 	command -v "$@" >/dev/null 2>&1
 }
 
+#------------------------------------------------------------------------------#
+
 # Ensure Apple's command line tools are installed
 setup_xcode_cli() {
 	if ! command_exists cc; then
-		echo "Installing xcode ..."
+		msg_info "Installing xcode CLI tools..."
 		xcode-select --install
+		msg_success "Xcode CLI tools installed."
+		echo
 	else
-		echo "Xcode already installed. Skipping."
+		msg_success "Xcode already installed. Skipping."
+		echo
 	fi
 }
 
@@ -32,8 +76,13 @@ clone_and_install() {
 	sh install.sh
 }
 
+#------------------------------------------------------------------------------#
+
 main() {
-	echo 'Boostrapping ...'
+	setup_color
+
+	msg_info 'Boostrapping...'
+
 	setup_xcode_cli
 	clone_and_install
 }
