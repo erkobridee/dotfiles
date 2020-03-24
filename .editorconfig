@@ -14,8 +14,8 @@ indent_style = tab
 # [Makefile]
 # indent_style = tab
 
-# [*.md]
-# indent_style = tab
+[*.md]
+indent_style = space
 
 # [*.sh]
 # indent_style = tab
