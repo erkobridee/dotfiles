@@ -1,11 +1,13 @@
 #!/bin/sh
 #
-# installation flow to the dotfiles
+# setup flow to the dotfiles
 #
 set -e
 
-main() {
-	echo 'TODO: define the installation flow'
-}
+DOTFILES_ROOT=$(pwd -P)
+
+source setup/main.sh
 
 main "$@"
+
+unset DOTFILES_ROOT
