@@ -50,7 +50,7 @@ setup_xcode_cli() {
 		success "Xcode CLI tools installed."
 		echo
 	else
-		info "Xcode already installed. Skipping."
+		success "Xcode already installed. Skipping."
 		echo
 	fi
 }
