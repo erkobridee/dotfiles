@@ -15,3 +15,5 @@
 - [Linux Shell Scripting Tutorial v1.05r3 - A Beginner's handbook | freeOS](http://www.freeos.com/guides/lsst/)
 
 - [Shell Command Language | The Open Group Base Specifications Issue 7, 2018 edition](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
+
+- [[GitHub] sstephenson/bats](https://github.com/sstephenson/bats) - Bash Automated Testing System
