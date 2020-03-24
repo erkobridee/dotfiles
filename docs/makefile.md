@@ -1,6 +1,8 @@
+[⬅️ README.md](../README.md)
+
 # Makefile
 
-> useful references about the subject
+## Useful references
 
 - [Introduction (GNU make)](https://www.gnu.org/software/make/manual/html_node/Introduction.html)
 

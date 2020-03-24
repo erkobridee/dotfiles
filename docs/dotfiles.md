@@ -1,3 +1,5 @@
+[⬅️ README.md](../README.md)
+
 # Dotfiles
 
 ## Useful references
