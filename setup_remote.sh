@@ -7,6 +7,8 @@
 #
 set -e
 
+echo
+
 trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
 
 REMOTE='https://github.com/erkobridee/dotfiles'
@@ -63,9 +65,6 @@ clone_and_install() {
 #------------------------------------------------------------------------------#
 
 main() {
-	setup_color
-
-	echo
 	info 'Boostrapping...'
 
 	setup_xcode_cli
