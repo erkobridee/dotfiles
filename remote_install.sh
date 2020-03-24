@@ -14,39 +14,22 @@ TARGET="$HOME/.dotfiles"
 
 #------------------------------------------------------------------------------#
 
-setup_color() {
-	# Only use colors if connected to a terminal
-	if [ -t 1 ]; then
-		RED=$(printf '\033[31m')
-		GREEN=$(printf '\033[32m')
-		YELLOW=$(printf '\033[33m')
-		BLUE=$(printf '\033[34m')
-		BOLD=$(printf '\033[1m')
-		RESET=$(printf '\033[m')
-	else
-		RED=""
-		GREEN=""
-		YELLOW=""
-		BLUE=""
-		BOLD=""
-		RESET=""
-	fi
+info() {
+	printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 }
 
-msg_info() {
-	echo ${BLUE}"Info: $@"${RESET} >&2
+user() {
+	printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
 
-msg_error() {
-	echo ${RED}"Error: $@"${RESET} >&2
+success() {
+	printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
 }
 
-msg_warning() {
-	echo ${YELLOW}"Warning: $@"${RESET} >&2
-}
-
-msg_success() {
-	echo ${GREEN}"Success: $@"${RESET} >&2
+fail() {
+	printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+	echo ''
+	exit
 }
 
 #------------------------------------------------------------------------------#
@@ -60,12 +43,12 @@ command_exists() {
 # Ensure Apple's command line tools are installed
 setup_xcode_cli() {
 	if ! command_exists cc; then
-		echo "Installing xcode CLI tools..."
+		info "Installing xcode CLI tools..."
 		xcode-select --install
-		echo "Xcode CLI tools installed."
+		success "Xcode CLI tools installed."
 		echo
 	else
-		echo "Xcode already installed. Skipping."
+		info "Xcode already installed. Skipping."
 		echo
 	fi
 }
@@ -83,8 +66,7 @@ main() {
 	setup_color
 
 	echo
-	echo 'Boostrapping...'
-	echo
+	info 'Boostrapping...'
 
 	setup_xcode_cli
 	clone_and_install
