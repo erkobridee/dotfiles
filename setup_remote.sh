@@ -1,9 +1,9 @@
 #!/bin/sh
 #
 # This script should be run via curl:
-#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/erkobridee/dotfiles/master/remote_install.sh)"
+#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/erkobridee/dotfiles/master/setup_remote.sh)"
 # or wget:
-#   sh -c "$(wget -qO- https://raw.githubusercontent.com/erkobridee/dotfiles/master/remote_install.sh)"
+#   sh -c "$(wget -qO- https://raw.githubusercontent.com/erkobridee/dotfiles/master/setup_remote.sh)"
 #
 set -e
 
