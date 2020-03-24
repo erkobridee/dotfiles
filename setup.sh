@@ -4,7 +4,7 @@
 #
 set -e
 
-DOTFILES_ROOT=$(pwd -P)
+DOTFILES_DIR=$(pwd -P)
 
 source setup/main.sh
 
