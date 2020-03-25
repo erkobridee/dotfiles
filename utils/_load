@@ -11,7 +11,7 @@ fi
 
 MATCHES="*.sh"
 
-for FILE in $(find "$DIR" -iname "$MATCHES"); do
+for FILE in $(find "$DIR" -type f -iname "$MATCHES"); do
 	[ -f $FILE ] && . $FILE
 done
 
