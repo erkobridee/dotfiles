@@ -15,12 +15,12 @@ else
 fi
 
 # load the utilities
-source utils/_load
+source $DOTFILES_DIR/utils/_load
 
 prepend_path "$DOTFILES_DIR/bin"
 
 # load the system utilities
-source system/_load
+source $DOTFILES_DIR/system/_load
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755
