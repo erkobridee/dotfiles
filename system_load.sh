@@ -5,7 +5,7 @@
 # source ~/.dotfiles/system_load.sh
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+# [ -z "$PS1" ] && return
 
 if [ -d "$HOME/.dotfiles" ]; then
 	DOTFILES_DIR="$HOME/.dotfiles"

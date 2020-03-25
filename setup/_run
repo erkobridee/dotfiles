@@ -1,4 +1,8 @@
 #!bin/sh
+if [[ -z "$BASH_SOURCE" ]]; then
+	BASH_SOURCE=$0
+fi
+
 DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)
 
 load_source $DIR/prepare.sh

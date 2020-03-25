@@ -1,5 +1,9 @@
 # https://devhints.io/bash
 
+function is_admin() {
+	sudo -n -l 2>&1 | grep -v "not allowed to run sudo|unknown user" >/dev/null
+}
+
 function is_executable() {
 	type "$1" >/dev/null 2>&1
 }

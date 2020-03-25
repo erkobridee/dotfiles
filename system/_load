@@ -1,8 +1,9 @@
 #!bin/sh
-DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)
+DIR=$(dirname $0)
 
 load_sources $DIR/editors
 load_sources $DIR/functions
 load_sources $DIR/alias
+load_sources $DIR/nodejs
 
 unset DIR

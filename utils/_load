@@ -4,7 +4,11 @@ if [[ -z "$DOTFILES_DIR" ]]; then
 	exit
 fi
 
-DIR="$DOTFILES_DIR/$(dirname $BASH_SOURCE)"
+if [[ -z "$BASH_SOURCE" ]]; then
+	BASH_SOURCE=$0
+fi
+
+DIR="$(dirname $BASH_SOURCE)"
 MATCHES="*.sh"
 
 for FILE in $(find "$DIR" -type f -iname "$MATCHES"); do

@@ -16,4 +16,4 @@ alias cd.='cd $(readlink -f .)' # Go to real dir (i.e. if current dir is linked)
 
 alias home='cd $HOME'
 
-alias hosts="sudo $EDITOR /etc/hosts"
+alias hosts="sudo -v && $EDITOR /etc/hosts"
