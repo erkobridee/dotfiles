@@ -1,0 +1,72 @@
+#!/bin/sh
+
+BIN_NAME=$(basename "$0")
+COMMAND_NAME=$1
+SUB_COMMAND_NAME=$2
+
+sub_help() {
+	echo "Usage: $BIN_NAME <command>"
+	echo
+	echo "Commands:"
+	echo "   clean            Clean up caches (brew, nvm, gem)"
+	echo "   dock             Apply macOS Dock settings"
+	echo "   edit             Open dotfiles in IDE ($EDITOR)"
+	echo "   help             This help message"
+	echo "   macos            Apply macOS system defaults"
+	echo "   update           Update packages and pkg managers (OS, brew, npm, gem)"
+}
+
+sub_edit() {
+	sh -c "$EDITOR $DOTFILES_DIR"
+}
+
+sub_update() {
+	# sudo softwareupdate -i -a
+	# brew update
+	# brew upgrade
+	# npm install npm -g
+	# npm update -g
+	# gem update --system
+	# gem update
+
+	echo "TODO: define the update flow"
+}
+
+sub_clean() {
+	# brew cleanup
+	# gem cleanup
+	# . "$NVM_DIR/nvm.sh"
+	# nvm cache clear
+
+	echo "TODO: define the clean flow"
+}
+
+sub_macos() {
+	# for DEFAULTS_FILE in "${DOTFILES_DIR}"/macos/defaults*.sh; do
+	# 	echo "Applying ${DEFAULTS_FILE}" && . "${DEFAULTS_FILE}"
+	# done
+	# echo "Done. Some changes may require a logout/restart to take effect."
+
+	echo "TODO: define the macos flow"
+}
+
+sub_dock() {
+	# . "${DOTFILES_DIR}/macos/dock.sh" && echo "Dock reloaded."
+
+	echo "TODO: define the dock flow"
+}
+
+case $COMMAND_NAME in
+"" | "-h" | "--help")
+	sub_help
+	;;
+*)
+	shift
+	sub_${COMMAND_NAME} $@
+	if [ $? = 127 ]; then
+		echo "'$COMMAND_NAME' is not a known command or has errors." >&2
+		sub_help
+		exit 1
+	fi
+	;;
+esac

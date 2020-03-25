@@ -1,0 +1,8 @@
+#!bin/sh
+DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)
+
+load_sources $DIR/editors
+load_sources $DIR/functions
+load_sources $DIR/alias
+
+unset DIR
