@@ -1,4 +1,4 @@
-if ! is_executable nvm; then
+if is_executable nvm; then
 	print_success 'nvm is already setup'
 else
 	print_info 'setting up the nvm'

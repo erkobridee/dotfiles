@@ -1,7 +1,7 @@
 if ! command_exists cc; then
-	print_info "Installing xcode CLI tools..."
+	print_installing "xcode CLI tools"
 	xcode-select --install
-	print_success "Xcode CLI tools installed."
+	print_installed "xcode CLI tools"
 else
-	print_success "Xcode already installed. Skipping."
+	print_already_installed "xcode CLI tools"
 fi

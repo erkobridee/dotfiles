@@ -15,3 +15,17 @@ print_fail() {
 	echo ''
 	exit
 }
+
+#------------------------------------------------------------------------------#
+
+function print_already_installed() {
+	print_success "$1 already installed. Skipping."
+}
+
+function print_installing() {
+	print_info "Installing $1..."
+}
+
+function print_installed() {
+	print_success "$1 installed."
+}
