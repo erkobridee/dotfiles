@@ -55,7 +55,7 @@ clone_and_install() {
 #------------------------------------------------------------------------------#
 
 main() {
-	print_info 'Boostrapping...'
+	print_info 'Remote dotfiles setup...'
 
 	setup_xcode_cli
 	clone_and_install
