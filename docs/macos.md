@@ -29,3 +29,5 @@ Currently I'm using the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) fon
 - [[GitHub] luc1dLife/macOS](https://github.com/luc1dLife/macOS) - My macOS Desktop Configuration
 
 - [[GitHub] mzdr/macOS](https://github.com/mzdr/macOS) - 💻 When I do a clean macOS installation.
+
+- [Download Files from the Web via the Mac OS X Command Line | OS X Daily](https://osxdaily.com/2007/05/11/download-files-from-the-web-via-the-os-x-command-line/)
