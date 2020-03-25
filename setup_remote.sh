@@ -55,7 +55,7 @@ clone_and_install() {
 #------------------------------------------------------------------------------#
 
 main() {
-	info 'Boostrapping...'
+	print_info 'Boostrapping...'
 
 	setup_xcode_cli
 	clone_and_install
