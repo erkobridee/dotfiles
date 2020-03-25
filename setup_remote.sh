@@ -16,22 +16,12 @@ TARGET="$HOME/.dotfiles"
 
 #------------------------------------------------------------------------------#
 
-info() {
+print_info() {
 	printf "\r  [ \033[0;94mINFO\033[0m ] $1\n"
 }
 
-user() {
-	printf "\r  [ \033[0;93m??\033[0m ] $1\n"
-}
-
-success() {
+print_success() {
 	printf "\r\033[2K  [ \033[0;92mOK\033[0m ] $1\n"
-}
-
-fail() {
-	printf "\r\033[2K  [\033[0;91mFAIL\033[0m] $1\n"
-	echo ''
-	exit
 }
 
 #------------------------------------------------------------------------------#
@@ -45,12 +35,12 @@ command_exists() {
 # Ensure Apple's command line tools are installed
 setup_xcode_cli() {
 	if ! command_exists cc; then
-		info "Installing xcode CLI tools..."
+		print_info "Installing xcode CLI tools..."
 		xcode-select --install
-		success "Xcode CLI tools installed."
+		print_success "Xcode CLI tools installed."
 		echo
 	else
-		success "Xcode already installed. Skipping."
+		print_success "Xcode already installed. Skipping."
 		echo
 	fi
 }

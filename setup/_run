@@ -1,0 +1,11 @@
+#!bin/sh
+DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)
+
+load_source $DIR/prepare.sh
+load_source $DIR/xcode_cli.sh
+load_source $DIR/git.sh
+load_source $DIR/node.sh
+load_source $DIR/brew.sh
+load_source $DIR/install.sh
+
+unset DIR
