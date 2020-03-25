@@ -1,18 +1,14 @@
 #!bin/sh
-BASEDIR=$(dirname "$0")
-if [[ -n "$DOTFILES_DIR" ]]; then
-	BASEDIR=$DOTFILES_DIR
+if [[ -z "$DOTFILES_DIR" ]]; then
+	echo "it's not a valid execution..."
+	exit
 fi
 
-DIR=$BASEDIR
-if [[ "$DIR" != "$(dirname $BASH_SOURCE)" ]]; then
-	DIR="$DOTFILES_DIR/$(dirname $BASH_SOURCE)"
-fi
-
+DIR="$DOTFILES_DIR/$(dirname $BASH_SOURCE)"
 MATCHES="*.sh"
 
 for FILE in $(find "$DIR" -type f -iname "$MATCHES"); do
-	[ -f $FILE ] && . $FILE
+	source $FILE
 done
 
-unset BASEDIR DIR MATCHES FILE
+unset DIR MATCHES FILE
