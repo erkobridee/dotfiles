@@ -20,6 +20,8 @@
 
 - [Bash Functions | linuxize](https://linuxize.com/post/bash-functions/)
 
+- [How to Create Bash Aliases | Linuxize](https://linuxize.com/post/how-to-create-bash-aliases/)
+
 ## Tools
 
 - [[GitHub] sstephenson/bats](https://github.com/sstephenson/bats) - Bash Automated Testing System
