@@ -4,6 +4,8 @@
 
 ## Useful references
 
+- [Bash scripting cheatsheet | Devhints.io cheatsheets](https://devhints.io/bash)
+
 - [Shell Scripting Tutorial for Linux/Unix Beginners](https://www.guru99.com/introduction-to-shell-scripting.html)
 
 - [What is Shell Scripting? | EDUCBA](https://www.educba.com/what-is-shell-scripting/)
