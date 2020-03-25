@@ -2,6 +2,10 @@
 
 # Makefile
 
+- [GNU make manual](https://www.gnu.org/software/make/manual/html_node/index.html)
+
+  - [4.6 Phony Targets](https://www.gnu.org/software/make/manual/html_node/Phony-Targets.html)
+
 ## Useful references
 
 - [Introduction (GNU make)](https://www.gnu.org/software/make/manual/html_node/Introduction.html)

@@ -44,3 +44,13 @@ sh setup.sh
 - [Makefile](docs/makefile.md)
 
 - [Ansible](docs/ansible.md)
+
+## Inspirations
+
+- [[GitHub] webpro/dotfiles](https://github.com/webpro/dotfiles)
+
+- [[GitHub] holman/dotfiles](https://github.com/holman/dotfiles)
+
+- [[GitHub] camspiers/dotfiles](https://github.com/camspiers/dotfiles)
+
+- [[GitHub] mzdr/macOS](https://github.com/mzdr/macOS) - 💻 When I do a clean macOS installation.

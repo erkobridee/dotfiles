@@ -12,6 +12,16 @@
 
 - [An introduction to Dotfiles: how to take control of your development environment | freeCodeCamp](https://www.freecodecamp.org/news/dive-into-dotfiles-part-1-e4eb1003cff6/)
 
+### GNU Stow
+
+> help to manage symbolic links
+
+- [Managing Dotfiles with GNU Stow | Steven R. Baker](https://stevenrbaker.com/tech/managing-dotfiles-with-gnu-stow.html)
+
+- [Managing dotfiles with GNU stow | Alex Pearce](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/)
+
+  - [[GitHub] alexpearce/dotfiles](https://github.com/alexpearce/dotfiles)
+
 ## Interesting projects
 
 - [[GitHub] webpro/dotfiles](https://github.com/webpro/dotfiles) - Dotfiles for macOS
