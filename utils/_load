@@ -1,0 +1,18 @@
+#!bin/sh
+BASEDIR=$(dirname "$0")
+if [[ -n "$DOTFILES_DIR" ]]; then
+	BASEDIR=$DOTFILES_DIR
+fi
+
+DIR=$BASEDIR
+if [[ "$DIR" != "$(dirname $BASH_SOURCE)" ]]; then
+	DIR="$DOTFILES_DIR/$(dirname $BASH_SOURCE)"
+fi
+
+MATCHES="*.sh"
+
+for FILE in $(find "$DIR" -iname "$MATCHES"); do
+	[ -f $FILE ] && . $FILE
+done
+
+unset BASEDIR DIR MATCHES FILE
