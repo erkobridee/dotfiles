@@ -1,6 +1,6 @@
 echo
 echo
-echo "        We are about to setup your  Mac!        "
+echo "        Start  Mac setup!        "
 echo
 echo
 
@@ -12,7 +12,7 @@ if ! is_admin; then
 	print_user 'some setup tasks needs the sudo access'
 	sudo -v
 else
-	echo '        !!! your user has SUDO powers !!!        '
+	echo '        !!! Your user has SUDO powers !!!        '
 	echo
 	echo
 fi
