@@ -1,10 +1,15 @@
 #!/bin/sh
 
+function print_todo() {
+	printf "\r  [ 📝 \033[0;93mTODO\033[0m ] $1\n"
+}
+
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
 
 sub_help() {
+	echo ""
 	echo "Usage: $BIN_NAME <command>"
 	echo
 	echo "Commands:"
@@ -14,6 +19,7 @@ sub_help() {
 	echo "   macos            Apply macOS system defaults"
 	echo "   update           Update packages and pkg managers (OS, brew, npm, gem)"
 	echo "   clean            Clean up caches (brew, nvm, gem)"
+	echo ""
 }
 
 sub_edit() {
@@ -29,7 +35,7 @@ sub_update() {
 	# gem update --system
 	# gem update
 
-	echo "TODO: define the update flow"
+	print_todo "define the update flow"
 }
 
 sub_clean() {
@@ -38,7 +44,7 @@ sub_clean() {
 	# . "$NVM_DIR/nvm.sh"
 	# nvm cache clear
 
-	echo "TODO: define the clean flow"
+	print_todo "define the clean flow"
 }
 
 sub_macos() {
@@ -47,13 +53,13 @@ sub_macos() {
 	# done
 	# echo "Done. Some changes may require a logout/restart to take effect."
 
-	echo "TODO: define the macos flow"
+	print_todo "define the macos flow"
 }
 
 sub_dock() {
 	# . "${DOTFILES_DIR}/macos/dock.sh" && echo "Dock reloaded."
 
-	echo "TODO: define the dock flow"
+	print_todo "define the dock flow"
 }
 
 case $COMMAND_NAME in
