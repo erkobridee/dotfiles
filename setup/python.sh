@@ -6,11 +6,11 @@ print_info "system: ${python_version}"
 
 # https://github.com/pyenv/pyenv
 
-if is_directory $HOME/.nvm; then
-	echo "nvm is there"
-else
-	echo "nop"
-fi
+# if is_directory $HOME/.nvm; then
+# 	echo "nvm is there"
+# else
+# 	echo "nop"
+# fi
 
 # https://github.com/pypa/pip
 # http://sourabhbajaj.com/mac-setup/Python/pip.html
