@@ -15,7 +15,7 @@ else
 fi
 
 # load the utilities
-source $DOTFILES_DIR/utils/_load
+source $DOTFILES_DIR/helpers/_load
 
 prepend_path "$DOTFILES_DIR/bin"
 

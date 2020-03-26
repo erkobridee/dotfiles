@@ -5,6 +5,11 @@ fi
 
 DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)
 
+load_sources $DIR/helpers
+
+# call an sh function using string name
+# eval "print_info 'hello setup.sh'"
+
 load_source $DIR/prepare.sh
 load_source $DIR/xcode_cli.sh
 load_source $DIR/git.sh
