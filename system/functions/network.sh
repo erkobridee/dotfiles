@@ -1,10 +1,17 @@
+function dns_flush() {
+	# flush DNS settings on macOS
+	sudo killall -HUP mDNSResponder
+}
+
+#------------------------------------------------------------------------------#
+
 # get the IP from a given hostname (domain)
-hostname2ip() {
+function hostname2ip() {
 	ping -c 1 "$1" | egrep -m1 -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
 }
 
 # Find real from shortened url
-unshorten_url() {
+function unshorten_url() {
 	curl -sIL $1 | sed -n 's/location: *//p'
 }
 

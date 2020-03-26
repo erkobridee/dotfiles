@@ -53,3 +53,18 @@ function git_reset_branch() {
 		echo "no branch defined"
 	fi
 }
+
+function git_delete_branch() {
+	if [ "$1" ]; then
+		git branch -D $1
+		git push origin :$1
+	else
+		echo "no branch defined"
+	fi
+}
+
+function git_copy_branch_name() {
+	local branch=$(git rev-parse --abbrev-ref HEAD)
+	echo "$branch >> git current branch copied to the clipboard"
+	echo $branch | tr -d '\n' | tr -d ' ' | pbcopy
+}

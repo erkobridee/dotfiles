@@ -1,7 +1,6 @@
 echo
 echo
-echo "        Start  Mac setup!        "
-echo
+echo "        Setup your  Mac!        "
 echo
 
 # Close any open System Preferences panes, to prevent them from overriding
@@ -9,9 +8,10 @@ echo
 osascript -e 'tell application "System Preferences" to quit'
 
 if ! is_admin; then
-	print_user 'some setup tasks needs the sudo access'
+	print_user 'some executions needs the sudo access'
 	sudo -v
 else
+	echo
 	echo '        !!! Your user has SUDO powers !!!        '
 	echo
 	echo
