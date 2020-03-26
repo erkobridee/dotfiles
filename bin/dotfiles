@@ -25,13 +25,18 @@ sub_edit() {
 }
 
 sub_update() {
-	setup_run sudo softwareupdate -i -a
 	setup_run brew update
 	setup_run brew upgrade
+
 	setup_run npm install npm -g
 	setup_run npm update -g
-	setup_run gem update --system
-	setup_run gem update
+
+	setup_run sudo gem update --system
+	setup_run sudo gem update
+
+	# this process takes some time
+	# TODO: ask to the user if it should be executed
+	setup_run sudo softwareupdate -i -a
 }
 
 sub_clean() {
