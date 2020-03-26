@@ -24,10 +24,20 @@ Get the profile from `~/.dotfiles/terminal_profiles` and import it on the termin
 
 Currently I'm using the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font for coding
 
-## Useful references
+## setup references
+
+- [[GitHub] rockyluke/osx-cli](https://github.com/rockyluke/osx-cli) - 🍏 Configure macOS settings from CLI.
 
 - [[GitHub] luc1dLife/macOS](https://github.com/luc1dLife/macOS) - My macOS Desktop Configuration
 
 - [[GitHub] mzdr/macOS](https://github.com/mzdr/macOS) - 💻 When I do a clean macOS installation.
+
+## useful references
+
+- [An A-Z Index of the Apple macOS command line (macOS bash)](https://ss64.com/osx/)
+
+  - [How-to: System preference settings for macOS](https://ss64.com/osx/syntax-defaults.html)
+
+- [macos - Command Line for Enable Dragging | Ask Different](https://apple.stackexchange.com/questions/362306/command-line-for-enable-dragging)
 
 - [Download Files from the Web via the Mac OS X Command Line | OS X Daily](https://osxdaily.com/2007/05/11/download-files-from-the-web-via-the-os-x-command-line/)
