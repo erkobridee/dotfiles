@@ -11,6 +11,39 @@ source helpers/_load
 chmodx "$DOTFILES_DIR/bin"
 
 load_sources setup/helpers
-source setup/_run
 
-unset DOTFILES_ROOT
+COMMAND=$1
+SUB_COMMAND=$2
+
+function case_system() {
+	source setup/system.sh
+}
+
+function case_macos() {
+	case "$SUB_COMMAND" in
+	ask)
+		source setup/macos/ask.sh
+		;;
+	*)
+		source setup/macos/default.sh
+		;;
+	esac
+}
+
+function case_default() {
+	source setup/_run
+}
+
+case "$COMMAND" in
+system)
+	case_system
+	;;
+macos)
+	case_macos
+	;;
+*)
+	case_default
+	;;
+esac
+
+unset DOTFILES_ROOT COMMAND SUB_COMMAND

@@ -45,7 +45,7 @@ sh setup.sh
 
 ```sh
 cd ~/.dotfiles
-sh setup_system.sh
+sh setup.sh system
 ```
 
 ## Documentation
