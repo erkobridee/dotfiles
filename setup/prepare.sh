@@ -14,7 +14,6 @@ else
 	echo
 	echo '        !!! Your user has SUDO powers !!!        '
 	echo
-	echo
 fi
 
 while true; do
