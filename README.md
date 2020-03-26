@@ -28,11 +28,24 @@ clone:
 git clone https://github.com/erkobridee/dotfiles ~/.dotfiles
 ```
 
-setup:
+#### setup all
+
+> executes the full machine setup, defined on [`setup/_run`](setup/_run)
 
 ```sh
 cd ~/.dotfiles
 sh setup.sh
+```
+
+#### setup system
+
+> executes the system (terminal related stuff) setup
+> loads the ~/.dotfiles/system_load.sh into the ~/.zshrc file
+> defined on [`setup/system.sh`](setup/system.sh)
+
+```sh
+cd ~/.dotfiles
+sh setup_system.sh
 ```
 
 ## Documentation
