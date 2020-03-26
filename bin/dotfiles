@@ -14,7 +14,8 @@ sub_help() {
 	echo "   help             This help message"
 	echo "   edit             Open dotfiles in ($EDITOR)"
 	echo "   dock             Apply macOS Dock settings"
-	echo "   macos            Apply macOS system defaults"
+	echo "   macos            Apply macOS system default"
+	echo "   macos ask        Apply macOS asked changes"
 	echo "   update           Update packages and pkg managers (OS, brew, npm, gem)"
 	echo "   clean            Clean up caches (brew, nvm, gem)"
 	echo ""
@@ -34,9 +35,19 @@ sub_update() {
 	setup_run sudo gem update --system
 	setup_run sudo gem update
 
-	# this process takes some time
-	# TODO: ask to the user if it should be executed
-	setup_run sudo softwareupdate -i -a
+	setup_step "Do you want to update your macOS? (it takes time) [Y/n]"
+	case $(
+		read choice
+		echo $choice
+	) in
+	[nN])
+		echo ""
+		;;
+	[yY] | *)
+		echo ""
+		setup_run sudo softwareupdate -i -a
+		;;
+	esac
 }
 
 sub_clean() {

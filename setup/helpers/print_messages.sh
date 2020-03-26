@@ -41,9 +41,7 @@ function setup_chapter() {
 # Prints out a step, if last parameter is true then without an ending newline
 function setup_step() {
 	if [ $# -eq 1 ]; then
-		echo -e "$dot$@"
-	else
-		echo -ne "$dot$@"
+		echo "$dot$@"
 	fi
 }
 
