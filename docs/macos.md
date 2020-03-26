@@ -26,6 +26,8 @@ Currently I'm using the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) fon
 
 ## setup references
 
+- [How to Configure your macOs Terminal with Zsh like a Pro | freeCodeCamp](https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/)
+
 - [[GitHub] rockyluke/osx-cli](https://github.com/rockyluke/osx-cli) - 🍏 Configure macOS settings from CLI.
 
 - [[GitHub] luc1dLife/macOS](https://github.com/luc1dLife/macOS) - My macOS Desktop Configuration
