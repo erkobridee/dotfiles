@@ -41,9 +41,7 @@ sh setup.sh
 
 - [ShellScript](docs/shellscript.md)
 
-- [Makefile](docs/makefile.md)
-
-- [Ansible](docs/ansible.md)
+- [macOS](docs/macos.md)
 
 ## Inspirations
 
