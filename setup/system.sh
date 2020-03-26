@@ -1,4 +1,4 @@
-setup_chapter "CLI"
+setup_chapter "CLI tools"
 
 ZSHRC_STR="~/.zshrc"
 ZSHRC="$HOME/.zshrc"

@@ -48,7 +48,7 @@ function setup_step() {
 }
 
 function setup_run() {
-	echo -e "$dim▹ $@ $reset"
+	echo "${dim}▸ $@ $reset"
 	eval $@
 	echo ''
 }

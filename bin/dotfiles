@@ -1,8 +1,6 @@
 #!/bin/sh
-
-function print_todo() {
-	printf "\r  [ 📝 \033[0;93mTODO\033[0m ] $1\n"
-}
+source $DOTFILES_DIR/setup/helpers/print_messages.sh
+print_set_vars
 
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
@@ -27,24 +25,20 @@ sub_edit() {
 }
 
 sub_update() {
-	# sudo softwareupdate -i -a
-	# brew update
-	# brew upgrade
-	# npm install npm -g
-	# npm update -g
-	# gem update --system
-	# gem update
-
-	print_todo "define the update flow"
+	setup_run sudo softwareupdate -i -a
+	setup_run brew update
+	setup_run brew upgrade
+	setup_run npm install npm -g
+	setup_run npm update -g
+	setup_run gem update --system
+	setup_run gem update
 }
 
 sub_clean() {
-	# brew cleanup
-	# gem cleanup
-	# . "$NVM_DIR/nvm.sh"
-	# nvm cache clear
-
-	print_todo "define the clean flow"
+	setup_run brew cleanup
+	setup_run gem cleanup
+	setup_run source "$NVM_DIR/nvm.sh"
+	setup_run nvm cache clear
 }
 
 sub_macos() {
@@ -72,7 +66,10 @@ case $COMMAND_NAME in
 	if [ $? = 127 ]; then
 		echo "'$COMMAND_NAME' is not a known command or has errors." >&2
 		sub_help
+		print_unset_vars
 		exit 1
 	fi
 	;;
 esac
+
+print_unset_vars
