@@ -37,7 +37,7 @@ cd ~/.dotfiles
 sh setup.sh
 ```
 
-#### setup system
+#### setup system terminal tools
 
 > executes the system (terminal related stuff) setup<br/>
 > loads the ~/.dotfiles/system_load.sh into the ~/.zshrc file<br/>

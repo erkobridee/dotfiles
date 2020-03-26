@@ -20,6 +20,8 @@ function case_system() {
 }
 
 function case_macos() {
+	print_set_vars
+	source setup/prepare.sh
 	case "$SUB_COMMAND" in
 	ask)
 		source setup/macos/ask.sh
@@ -28,6 +30,7 @@ function case_macos() {
 		source setup/macos/default.sh
 		;;
 	esac
+	print_unset_vars
 }
 
 function case_default() {

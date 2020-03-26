@@ -1,8 +1,12 @@
+setup_chapter "Python"
+
 # http://sourabhbajaj.com/mac-setup/Python/
 
 # read the python version and prevent to display the default output
-python_version=$(python --version 2>&1)
-print_info "system: ${python_version}"
+python_version=$(python --version 2>&1 | tr -d '\n')
+print_info "system: $python_version"
+
+print_todo "define the python configuration flow"
 
 # https://github.com/pyenv/pyenv
 

@@ -1,3 +1,5 @@
+setup_chapter "CLI"
+
 ZSHRC_STR="~/.zshrc"
 ZSHRC="$HOME/.zshrc"
 LOAD_SYSTEM="source \$HOME/.dotfiles/system_load.sh"
