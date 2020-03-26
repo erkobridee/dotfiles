@@ -39,8 +39,8 @@ sh setup.sh
 
 #### setup system
 
-> executes the system (terminal related stuff) setup
-> loads the ~/.dotfiles/system_load.sh into the ~/.zshrc file
+> executes the system (terminal related stuff) setup<br/>
+> loads the ~/.dotfiles/system_load.sh into the ~/.zshrc file<br/>
 > defined on [`setup/system.sh`](setup/system.sh)
 
 ```sh
