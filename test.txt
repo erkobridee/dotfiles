@@ -1,4 +1,0 @@
-
-# load the .dotfiles
-source $HOME/.dotfiles/system_load.sh
-
