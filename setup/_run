@@ -24,4 +24,4 @@ print_unset_vars
 
 unset DIR
 
-echo ''
+print_done "full setup"
