@@ -98,9 +98,7 @@ function print_success() {
 }
 
 function print_done() {
-	echo
-	echo "> $(printf '%.0s-' {1..70}) <"
-	echo
+	print_hr
 	printf "\r\033[2K  [ 🏁 \033[0;92mDONE\033[0m ] $1 \n"
 	echo
 }
