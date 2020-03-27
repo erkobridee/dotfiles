@@ -17,6 +17,12 @@ SUB_COMMAND=$2
 
 function case_system() {
 	source setup/system.sh
+	print_done "setup system CLI tools"
+}
+
+function case_dock() {
+	source setup/mackos/dock.sh
+	print_done "setup macOS dock"
 }
 
 function case_macos() {
@@ -25,9 +31,11 @@ function case_macos() {
 	case "$SUB_COMMAND" in
 	ask)
 		source setup/macos/ask.sh
+		print_done "setup macOS asking"
 		;;
 	*)
 		source setup/macos/default.sh
+		print_done "setup macOS applying defaults"
 		;;
 	esac
 	print_unset_vars
@@ -40,6 +48,9 @@ function case_default() {
 case "$COMMAND" in
 system)
 	case_system
+	;;
+dock)
+	case_dock
 	;;
 macos)
 	case_macos

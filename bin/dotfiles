@@ -60,18 +60,16 @@ sub_clean() {
 sub_macos() {
 	case "$SUB_COMMAND_NAME" in
 	ask)
-		sh $DOTFILES_DIR/setup.sh macos ask
+		setup_run sh $DOTFILES_DIR/setup.sh macos ask
 		;;
 	*)
-		sh $DOTFILES_DIR/setup.sh macos
+		setup_run sh $DOTFILES_DIR/setup.sh macos
 		;;
 	esac
 }
 
 sub_dock() {
-	# . "${DOTFILES_DIR}/macos/dock.sh" && echo "Dock reloaded."
-
-	print_todo "define the dock flow"
+	setup_run sh $DOTFILES_DIR/setup.sh dock
 }
 
 case $COMMAND_NAME in
@@ -82,10 +80,9 @@ case $COMMAND_NAME in
 	shift
 	sub_${COMMAND_NAME} $@
 	if [ $? = 127 ]; then
-		echo "'$COMMAND_NAME' is not a known command or has errors." >&2
 		sub_help
+		print_fail "'$COMMAND_NAME' is not a known command or has errors."
 		print_unset_vars
-		exit 1
 	fi
 	;;
 esac

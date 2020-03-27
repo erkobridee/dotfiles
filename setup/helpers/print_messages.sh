@@ -36,7 +36,9 @@ function print_unset_vars() {
 function repeat_char() {
 	local char=${1:=" "}
 	local LEN=${2:-1}
-	echo "$(for i in {1..$LEN}; do printf "%s" "$char"; done)"
+	for ((i = 1; i < $LEN; i++)); do
+		printf "%s" "$char"
+	done
 }
 
 #------------------------------------------------------------------------------#
@@ -71,7 +73,12 @@ function setup_run() {
 #------------------------------------------------------------------------------#
 
 function print_hr() {
-	local LEN=${1:-70}
+	# local LEN=${1:-70}
+	local LEN=70
+	if [[ -n "$1" ]]; then
+		LEN=$1
+	fi
+
 	echo
 	echo "> $(repeat_char '-' $LEN) <"
 	echo
@@ -104,7 +111,7 @@ function print_done() {
 }
 
 function print_fail() {
-	print_hr
+	print_hr 70
 	printf "\r\033[2K  [ 🛑 \033[0;91mFAIL\033[0m ] $1\n"
 	echo
 
