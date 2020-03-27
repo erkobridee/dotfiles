@@ -2,6 +2,8 @@
 
 # MacOS
 
+- [OS X cheatsheet | Devhints.io cheatsheets](https://devhints.io/osx)
+
 ## Terminal profiles
 
 Get the profile from `~/.dotfiles/terminal_profiles` and import it on the terminal application
@@ -34,11 +36,17 @@ Currently I'm using the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) fon
 
 - [[GitHub] mzdr/macOS](https://github.com/mzdr/macOS) - 💻 When I do a clean macOS installation.
 
+- [[GitHub] kevinSuttle/macOS-Defaults](https://github.com/kevinSuttle/macOS-Defaults) - A centralized place for the awesome work started by @mathiasbynens on .macos
+
+  - [macOS Default Values Command Reference](https://github.com/kevinSuttle/macOS-Defaults/blob/master/REFERENCE.md)
+
 ## useful references
 
 - [The Best Command Line Tools You Can Get on Your Mac With Homebrew](https://www.howtogeek.com/275381/the-best-command-line-tools-you-can-get-on-your-mac-with-homebrew/)
 
 - [An A-Z Index of the Apple macOS command line (macOS bash)](https://ss64.com/osx/)
+
+  - [defaults](https://ss64.com/osx/defaults.html) - Set preferences, the macOS user defaults system works with both the OS and with individual applications.
 
   - [How-to: System preference settings for macOS](https://ss64.com/osx/syntax-defaults.html)
 
