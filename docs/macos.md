@@ -36,6 +36,8 @@ Currently I'm using the [JetBrains Mono](https://www.jetbrains.com/lp/mono/) fon
 
 ## useful references
 
+- [The Best Command Line Tools You Can Get on Your Mac With Homebrew](https://www.howtogeek.com/275381/the-best-command-line-tools-you-can-get-on-your-mac-with-homebrew/)
+
 - [An A-Z Index of the Apple macOS command line (macOS bash)](https://ss64.com/osx/)
 
   - [How-to: System preference settings for macOS](https://ss64.com/osx/syntax-defaults.html)
