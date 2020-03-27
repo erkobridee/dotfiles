@@ -22,6 +22,7 @@ function smartextract() {
 		*.tgz) tar -zxvf $1 ;;
 		*.zip) unzip $1 ;;
 		*.Z) uncompress $1 ;;
+		'') echo "Usage: smartextract <file>" ;;
 		*) echo "'$1' cannot be extracted/mounted via smartextract()" ;;
 		esac
 	else
