@@ -22,6 +22,8 @@
 
 - [How to Create Bash Aliases | Linuxize](https://linuxize.com/post/how-to-create-bash-aliases/)
 
+- [[YouTube playlist] DEV / unix](https://www.youtube.com/playlist?list=PLywMSVoFVTch3QBGG6X-ESkEf2ibY2y2b)
+
 ## Tools
 
 - [[GitHub] sstephenson/bats](https://github.com/sstephenson/bats) - Bash Automated Testing System
