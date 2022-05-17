@@ -1,4 +1,4 @@
-INSTALL_DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)/install
+INSTALL_DIR=~/.dotfiles/setup/install
 
 setup_chapter "install brew utilities"
 
