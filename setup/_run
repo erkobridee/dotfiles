@@ -1,6 +1,6 @@
 #!bin/sh
 if [[ -z "$BASH_SOURCE" ]]; then
-	BASH_SOURCE=$0
+  BASH_SOURCE=$0
 fi
 
 DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)
@@ -12,9 +12,9 @@ print_set_vars
 
 load_source $DIR/prepare.sh
 load_source $DIR/xcode_cli.sh
-load_source $DIR/oh_my_zsh.sh
-load_source $DIR/git.sh
-load_source $DIR/python.sh
+# load_source $DIR/oh_my_zsh.sh
+# load_source $DIR/git.sh
+# load_source $DIR/python.sh
 load_source $DIR/node.sh
 load_source $DIR/brew.sh
 load_source $DIR/install.sh

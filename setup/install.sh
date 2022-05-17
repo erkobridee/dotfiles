@@ -1,11 +1,21 @@
+INSTALL_DIR=$DOTFILES_DIR/$(dirname $BASH_SOURCE)/install
+
+setup_chapter "install brew utilities"
+
+brew bundle --file=$(INSTALL_DIR)/Brewfile || true
+
 setup_chapter "install fonts"
 
-print_todo "define the installation fonts flow"
+brew bundle --file=$(INSTALL_DIR)/CaskFontsFile || true
 
 setup_chapter "install apps"
 
-# https://github.com/ytdl-org/youtube-dl
+brew bundle --file=$(INSTALL_DIR)/CaskAppsFile || true
 
-# google chrome, firefox, vlc, tunnelblink, atom, vs code
+xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
-print_todo "define the installation applications flow"
+setup_chapter "install VS Code cloud sync extension"
+
+code --install-extension Shan.code-settings-sync
+
+unset INSTALL_DIR
