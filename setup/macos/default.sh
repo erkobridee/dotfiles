@@ -39,7 +39,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 defaults write -g AppleTemperatureUnit -string "Celsius"
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
-sudo systemsetup -settimezone "Europe/Luxembourg" >/dev/null
+# sudo systemsetup -settimezone "Europe/Luxembourg" >/dev/null
 
 # Disable audio feedback when volume is changed
 defaults write com.apple.sound.beep.feedback -bool false
