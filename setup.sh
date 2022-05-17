@@ -46,7 +46,7 @@ function case_macos_google_chrome() {
 }
 
 function case_apps() {
-  source source setup/install.sh
+  source setup/install.sh
   print_done "setup macOS Apps and Fonts"
 
   case_macos_google_chrome
