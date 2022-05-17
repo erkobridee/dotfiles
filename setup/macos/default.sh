@@ -2,6 +2,9 @@
 # https://github.com/webpro/dotfiles/blob/master/macos/defaults.sh
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
+# https://eclecticlight.co/2019/08/15/global-defaults-in-macos-mojave/
+# https://gist.github.com/vraravam/5e28ca1720c9dddacdc0e6db61e093fe
+
 COMPUTER_NAME="ebac-mpb"
 
 osascript -e 'tell application "System Preferences" to quit'
@@ -32,6 +35,7 @@ defaults write NSGlobalDomain AppleLanguages -array "en" "pt"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write -g AppleTemperatureUnit -string "Celsius"
 
 # Set the timezone (see `sudo systemsetup -listtimezones` for other values)
 sudo systemsetup -settimezone "Europe/Luxembourg" >/dev/null
@@ -68,11 +72,19 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+# Show remaining battery percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Redefine the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible Siri" -bool false
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.airport" -bool false
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.appleuser" -bool false
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -bool true
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -bool true
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -bool true
 
 # Disable the crash reporter
-# defaults write com.apple.CrashReporter DialogType -string "none"
+defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
@@ -137,20 +149,31 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+# defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
+# defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+###############################################################################
+# TextEdit                                                                    #
+###############################################################################
+
+# Use plain text mode for new TextEdit documents
+defaults write com.apple.TextEdit RichText -int 0
+
+# Open and save files as UTF-8 in TextEdit
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
 ###############################################################################
 # Finder                                                                      #
@@ -310,6 +333,9 @@ defaults write com.apple.terminal StringEncodings -array 4
 defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 defaults write com.apple.Terminal ShowLineMarks -int 0
+
+# New window opens in the same directory as the current window
+defaults write com.apple.Terminal NewWindowWorkingDirectoryBehavior -int 2
 
 ###############################################################################
 # Activity Monitor                                                            #
