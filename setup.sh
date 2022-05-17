@@ -21,8 +21,8 @@ function case_system() {
 }
 
 function case_nodejs() {
-  source setup/node.sh
-  print_done "setup node.js"
+  source setup/node_nvm.sh
+  print_done "setup node.js nvm"
 }
 
 function case_macos_ask() {
@@ -61,6 +61,7 @@ function case_macos() {
     ;;
   *)
     case_macos_default
+    case_macos_google_chrome
     ;;
   esac
   print_unset_vars

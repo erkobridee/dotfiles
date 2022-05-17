@@ -20,7 +20,6 @@ load_source $DIR/brew.sh
 load_source $DIR/install.sh
 load_source $DIR/macos.sh
 load_source $DIR/system.sh
-load_source $DIR/node.sh
 
 print_unset_vars
 

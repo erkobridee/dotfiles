@@ -1,0 +1,41 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/cask": {
+        "revision": "474d692ec2c6d3158bc4de65aa784b855c3c5c0c"
+      },
+      "homebrew/cask-versions": {
+        "revision": "064b0da6d3ba39e4365db5b34dfab5b7611699e5"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "bbe87daef350b1e6d833d83180e7af0a005a0e88"
+      }
+    },
+    "cask": {
+      "font-jetbrains-mono": {
+        "version": "2.242",
+        "options": {
+          "full_name": "font-jetbrains-mono"
+        }
+      },
+      "font-fira-code": {
+        "version": "6.2",
+        "options": {
+          "full_name": "font-fira-code"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "monterey": {
+        "HOMEBREW_VERSION": "3.4.11",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "5dab58e648e363d86fa1f1b25e7dc8cfab445b2c",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.3",
+        "macOS": "12.3.1"
+      }
+    }
+  }
+}
