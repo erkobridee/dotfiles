@@ -1,6 +1,7 @@
 # inspirations
 # https://github.com/webpro/dotfiles/blob/master/macos/defaults.sh
 # https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+# https://github.com/tannerbeam/mb-config/blob/master/defaults-write.sh
 
 # https://eclecticlight.co/2019/08/15/global-defaults-in-macos-mojave/
 # https://gist.github.com/vraravam/5e28ca1720c9dddacdc0e6db61e093fe
