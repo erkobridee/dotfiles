@@ -15,9 +15,9 @@ sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do
-  sudo -n true
-  sleep 60
-  kill -0 "$$" || exit
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
 done 2>/dev/null &
 
 ###############################################################################
@@ -46,9 +46,6 @@ defaults write com.apple.sound.beep.feedback -bool false
 
 # Disable the sound effects on boot
 # sudo nvram SystemAudioVolume=" "
-
-# Menu bar: show battery percentage
-defaults write com.apple.menuextra.battery ShowPercent YES
 
 # Disable opening and closing window animations
 # defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -382,5 +379,5 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
-  killall "${app}" &>/dev/null
+	killall "${app}" &>/dev/null
 done
