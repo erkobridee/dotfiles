@@ -25,6 +25,11 @@ function case_nodejs() {
   print_done "setup node.js"
 }
 
+function case_macos_ask() {
+  source setup/macos/ask.sh
+  print_done "setup macOS asking"
+}
+
 function case_macos_dock() {
   source setup/macos/dock.sh
   print_done "setup macOS dock"
@@ -35,18 +40,13 @@ function case_macos_default() {
   print_done "setup macOS applying defaults"
 }
 
-function case_macos_ask() {
-  source setup/macos/ask.sh
-  print_done "setup macOS asking"
-}
-
 function case_macos_google_chrome() {
-  source source setup/macos/default-chrome.sh
+  source setup/macos/default-chrome.sh
   print_done "setup macOS Google Chrome"
 }
 
-function case_macos_apps() {
-  source source setup/macos/install.sh
+function case_apps() {
+  source source setup/install.sh
   print_done "setup macOS Apps and Fonts"
 
   case_macos_google_chrome
@@ -77,11 +77,11 @@ system)
 nodejs)
   case_nodejs
   ;;
+apps)
+  case_apps
+  ;;
 macos_dock)
   case_macos_dock
-  ;;
-macos_apps)
-  case_macos_apps
   ;;
 macos)
   case_macos
