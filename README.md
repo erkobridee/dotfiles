@@ -68,7 +68,7 @@ sh setup.sh system
 
 ## Known issues
 
-### Dockutils
+### [Dockutils](https://github.com/kcrawford/dockutil)
 
 The instalation over homebrew installs the version 2.0.5 which doesn't work with the latest Mac OS v12
 
