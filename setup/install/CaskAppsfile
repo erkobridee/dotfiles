@@ -18,6 +18,7 @@ cask "iterm2"
 cask "docker"
 cask "rectangle"
 cask "vlc"
+cask "numi"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 cask "qlcolorcode"
