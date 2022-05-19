@@ -65,3 +65,17 @@ sh setup.sh system
 - [[GitHub] camspiers/dotfiles](https://github.com/camspiers/dotfiles)
 
 - [[GitHub] mzdr/macOS](https://github.com/mzdr/macOS) - 💻 When I do a clean macOS installation.
+
+## Known issues
+
+### Dockutils
+
+The instalation over homebrew installs the version 2.0.5 which doesn't work with the latest Mac OS v12
+
+- [[GitHub] kcrawford/dockutil - #127](https://github.com/kcrawford/dockutil/issues/127) - Not working on macOS 12.3 - need to upgrade Homebrew version from 2 to 3
+
+Temporary solution: ([comment](https://github.com/kcrawford/dockutil/issues/127#issuecomment-1118733013))
+
+```
+brew install --cask hpedrorodrigues/tools/dockutil
+```

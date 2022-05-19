@@ -2,6 +2,10 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 
+# temporary solution
+# https://github.com/kcrawford/dockutil/issues/127#issuecomment-1118733013
+cask "hpedrorodrigues/tools/dockutil"
+
 cask "firefox"
 cask "google-chrome"
 cask "visual-studio-code"

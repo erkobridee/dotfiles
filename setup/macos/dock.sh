@@ -4,4 +4,12 @@
 # inspirations
 # https://github.com/webpro/dotfiles/blob/master/macos/dock.sh
 
-print_todo "define: macos dock config"
+#!/bin/sh
+
+dockutil --no-restart --remove all
+dockutil --no-restart --add "/System/Applications/Calendar.app"
+dockutil --no-restart --add "/System/Applications/Utilities/Terminal.app"
+dockutil --no-restart --add "/System/Applications/System Preferences.app"
+dockutil --no-restart --add "/Applications/Google Chrome.app"
+
+killall Dock
