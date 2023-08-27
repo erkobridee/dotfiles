@@ -3,24 +3,31 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 
 # temporary solution
+
 # https://github.com/kcrawford/dockutil/issues/127#issuecomment-1118733013
+
 cask "hpedrorodrigues/tools/dockutil"
 
-cask "firefox"
 cask "google-chrome"
+cask "firefox"
 cask "visual-studio-code"
-cask "atom"
-cask "slack"
-cask "spotify"
 cask "1password"
-cask "appcleaner"
+cask "grammarly-desktop"
+cask "libreoffice"
+cask "slack"
+
+# cask "spotify"
+
 cask "iterm2"
-cask "docker"
+cask "appcleaner"
+cask "obsidian"
 cask "rectangle"
-cask "vlc"
 cask "numi"
+cask "docker"
+cask "vlc"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
+
 cask "qlcolorcode"
 cask "qlstephen"
 cask "qlmarkdown"
@@ -29,4 +36,5 @@ cask "qlimagesize"
 cask "suspicious-package"
 cask "apparency"
 cask "quicklookase"
+
 # cask "qlvideo"

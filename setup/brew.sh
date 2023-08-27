@@ -11,6 +11,6 @@ if is_executable brew; then
 	print_success 'Homebrew updated'
 else
 	print_installing "Homebrew"
-	setup_run sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+	setup_run sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	print_installed "Homebrew"
 fi

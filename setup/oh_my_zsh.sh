@@ -1,5 +1,7 @@
+# https://github.com/ohmyzsh/ohmyzsh
+
 setup_chapter "oh-my-zsh"
 
-print_todo 'define the install oh-my-zsh flow'
+setup_run sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# https://github.com/ohmyzsh/ohmyzsh
+print_todo 'define the install oh-my-zsh flow'
