@@ -4,6 +4,7 @@ DIR=$(dirname $0)
 load_sources $DIR/editors
 load_sources $DIR/functions
 load_sources $DIR/alias
+load_sources $DIR/java
 load_sources $DIR/nodejs
 
 unset DIR

@@ -1,4 +1,4 @@
-alias reload!='. ~/.zshrc'
+alias reload!='. ~/.zshrc && . ~/.zprofile'
 
 alias cl='clear'
 alias rt='reset'
